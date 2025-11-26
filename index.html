@@ -174,28 +174,19 @@ h2{font-family:'Montserrat',sans-serif;color:var(--brand-blue);font-size:28px;ma
 </footer>
 
 <!-- Booking Modal -->
-<div id="bookingModal" aria-hidden="true">
+<div id="bookingModal" class="modal" aria-hidden="true">
   <div class="modal-content">
-    <button onclick="closeBooking()" style="float:right;font-size:20px;border:none;background:none;cursor:pointer">✕</button>
+    <button class="close" onclick="closeBooking()">✕</button>
     <h2>Book a Free Trial Lesson</h2>
     <form action="https://formsubmit.co/advancedaxis502@gmail.com" method="POST">
       <input type="hidden" name="_captcha" value="false">
-      <label>Name</label><input name="name" required style="width:100%;padding:8px;margin:6px 0;border-radius:6px;border:1px solid #ddd">
-      <label>Email</label><input type="email" name="email" required style="width:100%;padding:8px;margin:6px 0;border-radius:6px;border:1px solid #ddd">
-      <label>Phone</label><input name="phone" required style="width:100%;padding:8px;margin:6px 0;border-radius:6px;border:1px solid #ddd">
-      <label>Year level</label>
-      <select name="year" style="width:100%;padding:8px;margin:6px 0;border-radius:6px;border:1px solid #ddd">
-        <option>Year 4–6</option><option>Year 7–8</option><option>Year 9–10</option><option>Year 11</option><option>Year 12</option>
-      </select>
-      <label>Subject</label>
-      <select name="subject" style="width:100%;padding:8px;margin:6px 0;border-radius:6px;border:1px solid #ddd">
-        <option>Maths</option><option>English</option><option>Physics</option><option>Chemistry</option>
-      </select>
-      <label>Type</label>
-      <select name="type" style="width:100%;padding:8px;margin:6px 0;border-radius:6px;border:1px solid #ddd">
-        <option>Online</option><option>In-Person</option>
-      </select>
-      <button type="submit" style="margin-top:8px;padding:10px 16px;background:#1A73E8;color:#fff;border:none;border-radius:6px;cursor:pointer">Submit Booking</button>
+      <label>Name</label><input type="text" name="name" required>
+      <label>Email</label><input type="email" name="email" required>
+      <label>Phone</label><input type="text" name="phone" required>
+      <label>Year level</label><select name="year"><option>Year 4–6</option><option>Year 7–8</option><option>Year 9–10</option><option>Year 11</option><option>Year 12</option></select>
+      <label>Subject</label><select name="subject"><option>Maths</option><option>English</option><option>Physics</option><option>Chemistry</option></select>
+      <label>Type</label><select name="type"><option>Online</option><option>In-Person</option></select>
+      <button type="submit" class="submit-btn">Submit Booking</button>
     </form>
   </div>
 </div>
